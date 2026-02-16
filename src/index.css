@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root yükseklik */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Tema değişkenleri (Pawly palette) */
+:root {
+  --bg: #fff7f2;        /* açık şeftali */
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --coral: #f4a08b;     /* somon */
+  --mint: #78c7c3;      /* mint/teal */
+  --mint-dark: #4fb2ad;
+}
+
+/* Genel sayfa ayarları */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tailwind dışında kalan button / input'lar için güvenli varsayılan */
+button {
+  font-family: inherit;
+}
+
+/* Tatlı pattern (pati/kemik hissi) - aşırıya kaçmadan */
+.paw-pattern {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(244, 160, 139, 0.22) 2px, transparent 3px),
+    radial-gradient(circle at 120px 60px, rgba(120, 199, 195, 0.20) 2px, transparent 3px),
+    radial-gradient(circle at 70px 120px, rgba(244, 160, 139, 0.14) 2px, transparent 3px);
+  background-size: 160px 160px;
+}
+
+/* Scrollbar (Chrome/Edge) — daha yumuşak */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 23, 42, 0.18);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(15, 23, 42, 0.28);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
